@@ -1,0 +1,55 @@
+:root {
+  --color-bg-dark: #0B0C10;
+  --color-bg-light: #1F2833;
+  --color-accent-primary: #FF6B6B;
+  --color-accent-secondary: #C06C84;
+  
+  --font-heading: 'Playfair Display', 'Cinzel', serif;
+  --font-body: 'Inter', 'Montserrat', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg-dark);
+  background: radial-gradient(circle at center, var(--color-bg-light) 0%, var(--color-bg-dark) 100%);
+  background-attachment: fixed;
+  color: white;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Lenis Requirements */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
